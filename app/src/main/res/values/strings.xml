@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">wmart</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="toolbar_image">toolbar image</string>
+    <string name="dummy_country_name">USA</string>
+</resources>
