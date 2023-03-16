@@ -31,10 +31,11 @@ class CountryListAdapter : ListAdapter<Country, CountryListAdapter.CountryListVi
 
     override fun onBindViewHolder(holder: CountryListViewHolder, position: Int) {
         val country = getItem(position)
-        holder.view.findViewById<MaterialTextView>(R.id.tvCountry).text = country.name
+        holder.view.findViewById<MaterialTextView>(R.id.tvCountry).text = holder.view.resources.getString(R.string.country_region, country.name, country.region)
         holder.view.findViewById<MaterialTextView>(R.id.tvCapital).text = country.capital
         holder.view.findViewById<MaterialTextView>(R.id.tvLanguage).text = country.language.name
         holder.view.findViewById<MaterialTextView>(R.id.tvCurrency).text = country.currency.name
+        holder.view.findViewById<MaterialTextView>(R.id.tvCode).text = country.code
     }
 
     class CountryListViewHolder(val view : View) : RecyclerView.ViewHolder(view){}
